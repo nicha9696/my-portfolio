@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Natnicha Charoenpattaraparyoon — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-bar"></div>
+
+  <!-- CURSOR -->
+  <div id="cursor-ring"></div>
+
+
+
+  <!-- ════ SPLASH SCREEN ════ -->
+
+  <div class="splash-content">
+    <div class="splash-name" id="splash-name"></div>
+    <div class="splash-divider" id="splash-divider">
+      <div class="splash-divider-line left"></div>
+      <svg width="10" height="10" viewBox="0 0 10 10">
+        <path d="M5 0L6.2 3.8L10 5L6.2 6.2L5 10L3.8 6.2L0 5L3.8 3.8Z" fill="#C8860A" />
+      </svg>
+      <div class="splash-divider-line right"></div>
+    </div>
+    <div class="splash-sub" id="splash-sub"></div>
+  </div>
+  </div>
+
+  <!-- ════ MAIN SITE ════ -->
+  <div id="main-site" style="transition:opacity .9s ease;"></div>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo">NC</span>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero" class="nav-link active">About</a></li>
+      <li><a href="#about" class="nav-link">Story</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#goals" class="nav-link">Goals</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="dark-toggle" id="dark-toggle" onclick="toggleDark()" title="Toggle dark mode">🌙</button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero" class="section fade-in" style="padding-top:100px;">
+    <div class="hero-inner">
+      <div class="profile-ring">
+        <img src="portrait.jpg.jpg" alt="Natnicha" class="profile-img"
+          onerror="this.style.display='none';document.getElementById('profile-placeholder').style.display='flex'" />
+        <div id="profile-placeholder" class="profile-placeholder">NC</div>
+      </div>
+      <div class="hero-location">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        Thailand
+      </div>
+      <h1 class="hero-name">Natnicha Charoenpattaraparyoon</h1>
+      <span class="hero-role">Software Engineer in Training</span>
+      <p class="hero-intro">
+        I build my way into software engineering &mdash; one project, one bug, one commit at a time.
+        Currently turning a business background into real, working code.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-fill" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+          View My Work
+        </button>
+        <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get
+          In Touch</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section fade-in">
+    <div class="section-inner">
+      <span class="section-label">About</span>
+      <h2 class="section-title">From business strategy to building software</h2>
+      <div class="about-grid">
+        <div class="about-text" id="about-text">
+          <p>I graduated with a Bachelor&rsquo;s degree in Business Administration &mdash; a path built around
+            spreadsheets, strategy decks, and stakeholder meetings, not semicolons or stack traces.</p>
+          <p>Somewhere along the way, I got curious about how the products I used were actually built. That curiosity
+            turned into late nights with Python tutorials, then into Flask routes, then into my first deployed project.
+            I haven&rsquo;t stopped since.</p>
+          <p>I&rsquo;m not pretending the transition is finished. I&rsquo;m early, and I&rsquo;m honest about that. But
+            I&rsquo;ve learned that consistency closes gaps that talent alone can&rsquo;t &mdash; so I show up, I build,
+            and I get a little less new each week.</p>
+          <p>My goal is straightforward: become a Software Engineer who ships real things, and eventually work where
+            software meets AI &mdash; building systems that are useful, not just impressive on paper.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-year">2022</div>
+              <div class="timeline-label">Graduated</div>
+              <div class="timeline-detail">B.A. in Business Administration</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-year">2024</div>
+              <div class="timeline-label">The pivot</div>
+              <div class="timeline-detail">First line of Python, out of pure curiosity</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-year">2025</div>
+              <div class="timeline-label">First build</div>
+              <div class="timeline-detail">Shipped "Nicha's Empire" first Flask site.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div>
+              <div class="timeline-year">Now</div>
+              <div class="timeline-label">In motion</div>
+              <div class="timeline-detail">
+                Learning daily, building in public
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section fade-in" style="background:rgba(200,134,10,.02);">
+    <div class="section-inner">
+      <span class="section-label">Skills</span>
+      <h2 class="section-title">Tools I reach for</h2>
+      <p class="section-sub">Levels here reflect working comfort, not mastery &mdash; an honest snapshot of where I am
+        right now.</p>
+      <div class="skills-grid">
+        <div class="gold-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">Python</span>
+            <span class="skill-badge" style="color:#16a34a">Core</span>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" style="--target:70%"></div>
+          </div>
+        </div>
+        <div class="gold-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">Flask</span>
+            <span class="skill-badge" style="color:#16a34a">Core</span>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" style="--target:60%"></div>
+          </div>
+        </div>
+        <div class="gold-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">HTML</span>
+            <span class="skill-badge" style="color:#16a34a">Core</span>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" style="--target:80%"></div>
+          </div>
+        </div>
+        <div class="gold-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">CSS</span>
+            <span class="skill-badge" style="color:#16a34a">Core</span>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" style="--target:70%"></div>
+          </div>
+        </div>
+        <div class="gold-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-badge" style="color:#C8860A">Learning</span>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" style="--target:40%"></div>
+          </div>
+        </div>
+        <div class="gold-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">Git</span>
+            <span class="skill-badge" style="color:#C8860A">Learning</span>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" style="--target:35%"></div>
+          </div>
+        </div>
+        <div class="gold-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">AI Tools</span>
+            <span class="skill-badge" style="color:#16a34a">Core</span>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" style="--target:65%"></div>
+          </div>
+        </div>
+        <div class="gold-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">Prompt Engineering</span>
+            <span class="skill-badge" style="color:#16a34a">Core</span>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" style="--target:70%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="gold-card roadmap-card">
+        <div class="roadmap-header">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8860A" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12,6 12,12 16,14" />
+          </svg>
+          <span class="roadmap-title">Future Learning Roadmap</span>
+        </div>
+        <div class="roadmap-tags">
+          <span class="roadmap-tag">React &amp; TypeScript</span>
+          <span class="roadmap-tag">Backend APIs &amp; Databases</span>
+          <span class="roadmap-tag">Machine Learning fundamentals</span>
+          <span class="roadmap-tag">System Design basics</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="section fade-in">
+    <div class="section-inner">
+      <span class="section-label">Projects</span>
+      <h2 class="section-title">Things I&rsquo;ve built so far</h2>
+      <p class="section-sub">Early work, shown plainly. Each one taught me something the tutorials didn&rsquo;t.</p>
+      <div class="projects-grid">
+        <div class="gold-card project-card">
+          <div class="project-status" style="color:#16a34a">✓ Live</div>
+          <div class="project-title">Nicha&rsquo;s Empire</div>
+          <div class="project-sub">My first Flask website</div>
+          <div class="project-desc">A personal website built using Python Flask and HTML &mdash; the project that turned
+            &ldquo;I want to learn to code&rdquo; into something real and deployed. Rough edges and all, this is where
+            it started.</div>
+          <div class="project-tags"><span class="tag">Python</span><span class="tag">Flask</span><span
+              class="tag">HTML</span><span class="tag">CSS</span></div>
+        </div>
+        <div class="gold-card project-card">
+          <div class="project-status" style="color:#C8860A">⏱ In Progress</div>
+          <div class="project-title">Python Learning Journey</div>
+          <div class="project-sub">Exercises &amp; coding challenges</div>
+          <div class="project-desc">An ongoing collection of Python exercises and coding challenges &mdash; the daily
+            reps. Less polished than a portfolio piece, more honest about how the skill actually gets built.</div>
+          <div class="project-tags"><span class="tag">Python</span><span class="tag">Algorithms</span><span
+              class="tag">Practice</span></div>
+        </div>
+        <div class="gold-card project-card">
+          <div class="project-status" style="color:#C8860A">⏱ In Progress</div>
+          <div class="project-title">Future AI Project</div>
+          <div class="project-sub">Currently in development</div>
+          <div class="project-desc">Where the AI and Prompt Engineering skills meet real code. Details are still taking
+            shape &mdash; check back as this one comes together.</div>
+          <div class="project-tags"><span class="tag">AI</span><span class="tag">Python</span><span class="tag">In
+              Development</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- ── GOALS ── -->
+  <section id="goals" class="section fade-in" style="background:rgba(200,134,10,.02);">
+    <div class="section-inner">
+      <span class="section-label">Where this goes</span>
+      <h2 class="section-title">The road ahead</h2>
+      <div style="position:relative;padding-top:8px;">
+        <div class="goals-timeline-line"></div>
+        <div class="goals-grid">
+          <div>
+            <div class="goal-dot"></div>
+            <div class="goal-year">2026</div>
+            <div class="goal-title">Build strong programming foundation</div>
+            <div class="goal-detail">Python, JavaScript, data structures &mdash; depth before breadth.</div>
+          </div>
+          <div>
+            <div class="goal-dot"></div>
+            <div class="goal-year">2027</div>
+            <div class="goal-title">Become Junior Software Engineer</div>
+            <div class="goal-detail">First professional role, writing production code with a team.</div>
+          </div>
+          <div>
+            <div class="goal-dot"></div>
+            <div class="goal-year">2028</div>
+            <div class="goal-title">Work with AI &amp; Automation Systems</div>
+            <div class="goal-detail">Specialize where software engineering and applied AI intersect.</div>
+          </div>
+          <div>
+            <div class="goal-dot"></div>
+            <div class="goal-year">Future</div>
+            <div class="goal-title">International Software Engineer</div>
+            <div class="goal-detail">Build software that works &mdash; and matters &mdash; beyond one market.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section fade-in">
+    <div class="section-inner" style="max-width:700px;">
+      <span class="section-label">Contact</span>
+      <h2 class="section-title">Let&rsquo;s build something</h2>
+      <p class="section-sub" style="max-width:480px;margin:0 auto 44px;">Open to junior roles, internships, and
+        conversations with people who&rsquo;ll point out what I&rsquo;m missing.</p>
+      <div class="contact-grid">
+        <a href="mailto:Nicha17.official@gmail.com" target="_blank" class="gold-card contact-card">
+          <div class="contact-icon">&#9993;</div>
+          <div class="contact-label">Email</div>
+          <div class="contact-sub">Nicha17.official@gmail.com</div>
+        </a>
+        <a href="https://www.linkedin.com/in/natnicha-charoenpattaraparyoon-083aa8229/" target="_blank" class="gold-card contact-card">
+          <div class="contact-icon">&#9423;</div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-sub">Connect with me</div>
+        </a>
+        <a href="https://github.com/nicha9696/my-portfolio" target="_blank" class="gold-card contact-card">
+          <div class="contact-icon">&#9678;</div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-sub">See my code</div>
+        </a>
+      </div>
+      <a href="mailto:natnicha.dev@example.com" class="btn-fill">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+        Say hello
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 Natnicha Charoenpattaraparyoon</span>
+    <span>Built with HTML, CSS &amp; JavaScript</span>
+  </footer>
+
+  </div><!-- end main-site -->
+  <script src="script.js"></script>
+</body>
+
+</html>
